@@ -7,11 +7,11 @@
 ## SOLUTION :
 
 1. Fetch snippet,statistics from google client youtube videos api
-2: Extract items part of the response
-3: Transform this data to a list in which each object carries published date, channel id, channel name, viewCount, likeCount 
-4: connect to mysql using pymysql driver and sqlalchemy
-5: convert the above list to a dataframe
-6: dump this data to a table popular_videos
+2. Extract items part of the response
+3. Transform this data to a list in which each object carries published date, channel id, channel name, viewCount, likeCount 
+4. connect to mysql using pymysql driver and sqlalchemy
+5. convert the above list to a dataframe
+6. dump this data to a table popular_videos
 
 
 
