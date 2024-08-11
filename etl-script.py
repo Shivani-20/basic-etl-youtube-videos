@@ -50,6 +50,6 @@ def load_video_data(data):
         print(e)
    
     refined_data = pd.DataFrame(data)        
-    refined_data.to_sql("popular_videos", engine, if_exists='replace')
+    refined_data.to_sql(os.getenv("TABLE"), engine, if_exists='replace')
 
 extract_video_data()
