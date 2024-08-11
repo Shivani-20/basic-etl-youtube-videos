@@ -19,7 +19,10 @@ def extract_video_data():
     else:
         try:
             data = response["items"]
-            transform_video_data(data)
+            if not data:
+                logging.debug("videos list is empty")
+            else:    
+                transform_video_data(data)
             logging.info("data sent for transformation")
         except Exception as e:
             logging.error(e)
