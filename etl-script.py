@@ -5,7 +5,7 @@ from googleapiclient.discovery import build
 import sqlalchemy as sa
 
 
-def extract_channel_data():
+def extract_video_data():
     load_dotenv()
     key = os.getenv("API_KEY")
     try:
@@ -22,7 +22,7 @@ def extract_channel_data():
             print(e)
        
 
-def transform_channel_data(data):
+def transform_video_data(data):
     filtered_items=[]
     for i in data:
         collected = {}
@@ -35,7 +35,7 @@ def transform_channel_data(data):
     load_channel_data(filtered_items)
 
 
-def load_channel_data(data):
+def load_video_data(data):
 
     try:
         url_object = sa.URL.create(
