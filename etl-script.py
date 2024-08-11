@@ -17,7 +17,7 @@ def extract_video_data():
     else:
         try:
             data = response["items"]
-            transform_channel_data(data)
+            transform_video_data(data)
         except Exception as e:
             print(e)
        
@@ -32,7 +32,7 @@ def transform_video_data(data):
         collected["viewCount"]=i["statistics"]["viewCount"]
         collected["likeCount"]=i["statistics"]["likeCount"]
         filtered_items.append(collected)
-    load_channel_data(filtered_items)
+    load_video_data(filtered_items)
 
 
 def load_video_data(data):
@@ -52,4 +52,4 @@ def load_video_data(data):
     refined_data = pd.DataFrame(data)        
     refined_data.to_sql("popular_videos", engine, if_exists='replace')
 
-extract_channel_data()
+extract_video_data()
