@@ -21,9 +21,7 @@ ip -Go to Settings -> Network and Internet -> Status -> View Hardware and connec
 5. convert the above list to a dataframe
 6. dump this data to a table popular_videos
 
-## Airflow operators used:
+![Screenshot 2024-11-02 214605](https://github.com/user-attachments/assets/19f1c20c-b866-4c50-bb36-eb89fce22db4)
 
-* PythonOperator
-* MySqlOperator
   
 
