@@ -1,13 +1,11 @@
 ## PREREQUISITES
 
 * Note: my mysql is present in windows but I'm running airflow on WSL so make a connection to MySQL From WSL using necessary client and connector libraries, namely: mysql-client-core-8.0 and apache-airflow-providers-mysql
-* Set environment variables in airflow.cfg file
-API_KEY = "AIzaSyCkj-7CYN2KYHDVTIiN5vqgk4F0odj7tNw"
-HOST  = 'localhost'
-USER = 'root'
-PASSWD = 'Booksleg123#@'
-TABLE = "popular_videos"
-DATABASE = "Youtube"
+* change sql_alchemy_conn value in airflow.cfg file:
+sql_alchemy_conn = mysql+mysqldb://<user>:<password>@<ip>:3306/<database>
+
+username, password of database created
+ip -Go to Settings -> Network and Internet -> Status -> View Hardware and connection properties. Look for the name vEthernet (WSL)
 
 ## GOAL:
 
