@@ -56,7 +56,8 @@ def youtube_videos_taskflow_api():
     def load_video_data(data):
 
         try:
-            engine = sa.create_engine("mysql+mysqldb://wsl_user:books@172.18.64.1:3306/youtube")
+            # fill in ur own data
+            engine = sa.create_engine("mysql+mysqldb://")
             logging.info("Database connected")
             refined_data = pd.DataFrame(data)        
             refined_data.to_sql(TABLE, engine, if_exists='replace')
